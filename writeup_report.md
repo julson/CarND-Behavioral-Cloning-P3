@@ -71,7 +71,7 @@ Recovery maneuvers were also recorded just in case a vehicle veers off the lane:
 ![alt text][recovery2]
 ![alt text][recovery3]
 
-Other techniques included driving while hugging the edges (especially for turns). The initial data gathering phase produced some inconsistent results, so I had to go in a record more recovery data to iron out the kinks.
+Other techniques included driving while hugging the edges (especially for turns). The initial data gathering phase produced some inconsistent results, so I had to go in and record more recovery data to iron out the kinks.
 
 Overall, I ended up with a good model from 41412 images from track 1. I eventually tried to augment the track 1 data with my training data from track 2, which failed to create a general model for both tracks, but that's for another story (more below).
 
