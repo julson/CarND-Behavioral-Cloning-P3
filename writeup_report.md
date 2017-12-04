@@ -27,7 +27,7 @@
 
 ## Model Architecture
 
-The architecture uses a slightly modified version of Nvidia's PilotNet architecture. PilotNet has been used to successfully predict steering angles in real-world conditions, so I figured it's a good enough architecture to start with. The architecture uses 5 convolutional layers with 3x3 and 5x5 filters and 4 fully-connected layers (one less than PilotNet's). Each layer uses RELU for activation. Some minor preprocessing steps were used, like cropping the image to eliminate the area above the horizon and the hood of the car and normalizing the image values. The learning rate tuning was needed due to the usage of the Adam optimizer. Five epochs were used as I wasn't getting significant loss reduction after that (although it seems like 3 or 4 would have been enough too).
+The architecture uses a slightly modified version of Nvidia's PilotNet architecture. PilotNet has been used to successfully predict steering angles in real-world conditions, so I figured it's a good enough architecture to start with. The architecture uses 5 convolutional layers with 3x3 and 5x5 filters and 4 fully-connected layers (one less than PilotNet's). Each layer uses RELU for activation. Some minor preprocessing steps were used, like cropping the image to eliminate the area above the horizon and the hood of the car and normalizing the image values. The learning rate tuning wasn't needed due to the usage of the Adam optimizer. Five epochs were used as I wasn't getting significant loss reduction after that (although it seems like 3 or 4 would have been enough too).
 
 Here is the Keras implementation of the model:
 ```python
@@ -81,7 +81,7 @@ The model produced satisfactory results, with the car being able to run autonomo
 
 ## Improvements for the Future
 
-More training data, especially recovery data, would probably help in making the model smarter in navigating turns. I haven't included any dropout in the model, but it's something that I can play around in the future too. And of course, successfully incorporating track 2 data would help in making the model more robust
+More training data, especially recovery data, would probably help in making the model smarter in navigating turns. I haven't included any dropout in the model, but it's something that I can play around in the future too. And of course, successfully incorporating track 2 data would help in making the model more robust.
 
 ## The Case of Track 2
 
